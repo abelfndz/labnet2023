@@ -1,0 +1,116 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace LabNetPracticoNro1
+{
+    internal class Program
+    {
+        
+
+        static void Main(string[] args)
+        {
+
+            Menu.ShowMainMenu();
+            while (Menu.Input != Menu.ExitButton)
+            {
+
+                Menu.UserOption();
+
+                switch (Menu.Input)
+                {
+
+
+                    case "1":
+
+                        Menu.ShowTransportAddMenu();
+
+                        while (Menu.Input != Menu.GoBackButton)
+                        {
+                            Menu.UserOption();
+                            switch (Menu.Input)
+                            {
+
+                                case "1":
+                                  
+                                  
+                                    Menu.CheckIfVehicleCanBeAdded(Menu.TaxiCount,"Taxi");
+                                   break;
+
+                                    
+                                case "2":
+
+                                    Menu.CheckIfVehicleCanBeAdded(Menu.BusCount,"Bus");
+                                    break;
+
+                                case "N":
+
+                                    Menu.ShowMainMenu();
+                                    break;
+                                case "X":
+
+                                    Menu.ShowExitMessage();
+                                    return;
+                                default:
+
+                                    Menu.ShowTransportAddMenu();
+                                    Menu.InvalidOptionMessage();
+
+                                    break;
+                            }
+                        }
+                        break;
+
+                        case "2":
+
+                        Menu.PrintTransportList();
+                        break;
+
+                        case "8":
+
+                        Menu.ShowListDeleteMenu();
+                        while(Menu.Input != Menu.GoBackButton)
+                        {
+                            Menu.UserOption();
+                            switch (Menu.Input)
+                            {
+                                case "1":
+                                    
+                                    Menu.DeleteAllVehicles();
+                                    break;
+
+                                case "N":
+                                    Menu.ShowMainMenu();
+                                    break;
+
+                                default :
+
+                                    Menu.ShowListDeleteMenu();
+                                    Menu.InvalidOptionMessage();
+                                    break;
+                            }
+                        }
+                        break;
+
+
+                        case "X":
+
+                        Menu.ShowExitMessage();
+                        break;
+
+                        default:
+
+                        Menu.ShowMainMenu();
+                        Menu.InvalidOptionMessage();
+                        break;
+
+                }
+
+            }
+
+        }
+
+    }
+}
