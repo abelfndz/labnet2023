@@ -54,7 +54,7 @@ namespace LabNetPracticaNro2
             catch (ExcepcionPerosnalizada error)
             {
 
-                MessageBox.Show(error.Message + "\nTipo de excepcion: " + error.GetType().ToString());
+                MessageBox.Show(error.Message + "\nExcepcion de Tipo: " + error.GetType().ToString());
             }
         }
     }

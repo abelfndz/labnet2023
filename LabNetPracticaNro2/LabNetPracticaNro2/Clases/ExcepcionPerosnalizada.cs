@@ -10,6 +10,6 @@ namespace LabNetPracticaNro2.Clases
     {
         public ExcepcionPerosnalizada(string message) : base("Mensaje Base " + message) { }
 
-        public override string Message => "Mi mensaje de excepcion ";
+        public override string Message => "Esta es una Excepcion Personalizada ";
     }
 }
