@@ -6,16 +6,15 @@ using System.Threading.Tasks;
 
 namespace LabNetPracticaNro2.Clases
 {
-    public class Division
+    public class Division :IDivision
     {
-        public static void Dividirporcero(decimal numerador)
+
+        public static void DividirPorCero(decimal numerador)
         {
             const int denominador = 0;
 
             decimal division;
 
-            if (denominador == 0)
-            {
                 try
                 {
                     division = numerador / denominador;
@@ -25,15 +24,23 @@ namespace LabNetPracticaNro2.Clases
 
                     throw error;
                 }
-            }
 
         }
+        void IDivision.DividirPorCero(decimal numerador)
+        {
+            Division.DividirPorCero(numerador);
+        }
 
-        public static decimal Dividirdosnumeros(decimal Dividendo, decimal Divisor)
+        public static decimal DividirDosNumeros(decimal Dividendo, decimal Divisor)
         {
 
             return Dividendo / Divisor;
 
+        }
+
+        void IDivision.DividirDosNumeros(decimal Dividendo, decimal Divisor)
+        {
+            Division.DividirDosNumeros(Dividendo, Divisor);
         }
     }
 }

@@ -68,13 +68,18 @@
             0,
             0});
             this.numNumerador.Minimum = new decimal(new int[] {
-            1569325055,
-            23283064,
+            1,
             0,
-            -2147483648});
+            0,
+            0});
             this.numNumerador.Name = "numNumerador";
             this.numNumerador.Size = new System.Drawing.Size(159, 48);
             this.numNumerador.TabIndex = 2;
+            this.numNumerador.Value = new decimal(new int[] {
+            1,
+            0,
+            0,
+            0});
             // 
             // label3
             // 

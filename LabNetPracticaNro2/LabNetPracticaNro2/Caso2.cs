@@ -26,7 +26,7 @@ namespace LabNetPracticaNro2
                 decimal Dividendo = decimal.Parse(txtDividendo.Text);
                 decimal Divisor = decimal.Parse(txtDivisor.Text);
                 decimal resultado;
-                resultado = Division.Dividirdosnumeros(Dividendo, Divisor);
+                resultado = Division.DividirDosNumeros(Dividendo, Divisor);
                 lblResultado.Visible = true;
                 lblResultado.BackColor = Color.White;
                 lblResultado.Text = resultado.ToString();

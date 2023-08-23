@@ -5,6 +5,8 @@ VisualStudioVersion = 17.6.33723.286
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LabNetPracticaNro2", "LabNetPracticaNro2\LabNetPracticaNro2.csproj", "{40508AEF-8FA1-4391-8C74-708D9398E001}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LabNetPracticaNro2Tests", "LabNetPracticaNro2Tests\LabNetPracticaNro2Tests.csproj", "{C71F6836-0681-43E5-B1D7-1EA7BDA6FDD2}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +17,10 @@ Global
 		{40508AEF-8FA1-4391-8C74-708D9398E001}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{40508AEF-8FA1-4391-8C74-708D9398E001}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{40508AEF-8FA1-4391-8C74-708D9398E001}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C71F6836-0681-43E5-B1D7-1EA7BDA6FDD2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C71F6836-0681-43E5-B1D7-1EA7BDA6FDD2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C71F6836-0681-43E5-B1D7-1EA7BDA6FDD2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C71F6836-0681-43E5-B1D7-1EA7BDA6FDD2}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

@@ -8,7 +8,7 @@ using System.Windows.Forms;
 
 namespace LabNetPracticaNro2.Clases
 {
-    public class Logic
+    public class Logic : ILogic
     {
         public static void Excepcion()
         {
@@ -23,7 +23,11 @@ namespace LabNetPracticaNro2.Clases
             }
 
         }
-        public static void Excepcionpersonalizada()
+        void ILogic.Excepcion()
+        {
+            Logic.Excepcion();
+        }
+        public static void ExcepcionPersonalizada()
         {
             try
             {
@@ -35,6 +39,10 @@ namespace LabNetPracticaNro2.Clases
                 throw ex;
             }
 
+        }
+        void ILogic.ExcepcionPersonalizada()
+        {
+            Logic.ExcepcionPersonalizada();
         }
     }
 }

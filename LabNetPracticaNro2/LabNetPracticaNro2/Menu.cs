@@ -48,7 +48,7 @@ namespace LabNetPracticaNro2
         {
             try
             {
-                Logic.Excepcionpersonalizada();
+                Logic.ExcepcionPersonalizada();
 
             }
             catch (ExcepcionPerosnalizada error)

@@ -23,7 +23,7 @@ namespace LabNetPracticaNro2
         {
             try
             {
-                Division.Dividirporcero(numNumerador.Value);
+                Division.DividirPorCero(numNumerador.Value);
             }
             catch (Exception error)
             {
