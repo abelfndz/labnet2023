@@ -34,6 +34,7 @@ namespace Lab.Net.EF.UI.Vista.Empleado
             fNuevoEmpleado.ShowDialog();
             ActualizarDatos(txtFiltrar.Text);
             dgvConsultaEmpleado.CurrentCell = null;
+            EntidadId = 0;
         }
 
         private void btnEliminar_Click(object sender, EventArgs e)

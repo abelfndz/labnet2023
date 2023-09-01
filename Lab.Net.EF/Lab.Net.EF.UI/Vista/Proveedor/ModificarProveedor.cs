@@ -57,7 +57,7 @@ namespace Lab.Net.EF.UI.Vista.Proveedor
 
         private void btnCancelar_Click(object sender, EventArgs e)
         {
-
+            this.Close();
         }
 
         private void txtCiudad_KeyPress(object sender, KeyPressEventArgs e)

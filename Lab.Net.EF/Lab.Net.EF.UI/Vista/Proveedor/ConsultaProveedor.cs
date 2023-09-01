@@ -37,6 +37,7 @@ namespace Lab.Net.EF.UI.Vista.Proveedor
             fNuevoProveedor.ShowDialog();
             ActualizarDatos(txtFiltrar.Text);
             dgvConsultaProveedor.CurrentCell = null;
+            EntidadId = 0;
         }
         private void btnEliminar_Click(object sender, EventArgs e)
         {
