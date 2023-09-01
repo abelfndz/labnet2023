@@ -28,25 +28,14 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.dgvConsultaEmpleado = new System.Windows.Forms.DataGridView();
             this.btnEliminar = new System.Windows.Forms.Button();
             this.btnAgregar = new System.Windows.Forms.Button();
             this.lblModificar = new System.Windows.Forms.Label();
             this.lblFiltrar = new System.Windows.Forms.Label();
             this.txtFiltrar = new System.Windows.Forms.TextBox();
+            this.dgvConsultaEmpleado = new System.Windows.Forms.DataGridView();
             ((System.ComponentModel.ISupportInitialize)(this.dgvConsultaEmpleado)).BeginInit();
             this.SuspendLayout();
-            // 
-            // dgvConsultaEmpleado
-            // 
-            this.dgvConsultaEmpleado.AllowUserToAddRows = false;
-            this.dgvConsultaEmpleado.AllowUserToDeleteRows = false;
-            this.dgvConsultaEmpleado.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvConsultaEmpleado.Location = new System.Drawing.Point(12, 51);
-            this.dgvConsultaEmpleado.Name = "dgvConsultaEmpleado";
-            this.dgvConsultaEmpleado.ReadOnly = true;
-            this.dgvConsultaEmpleado.Size = new System.Drawing.Size(776, 313);
-            this.dgvConsultaEmpleado.TabIndex = 0;
             // 
             // btnEliminar
             // 
@@ -57,6 +46,7 @@
             this.btnEliminar.TabIndex = 2;
             this.btnEliminar.Text = "Eliminar";
             this.btnEliminar.UseVisualStyleBackColor = true;
+            this.btnEliminar.Click += new System.EventHandler(this.btnEliminar_Click);
             // 
             // btnAgregar
             // 
@@ -67,6 +57,7 @@
             this.btnAgregar.TabIndex = 3;
             this.btnAgregar.Text = "Agregar";
             this.btnAgregar.UseVisualStyleBackColor = true;
+            this.btnAgregar.Click += new System.EventHandler(this.btnAgregar_Click);
             // 
             // lblModificar
             // 
@@ -95,6 +86,21 @@
             this.txtFiltrar.Name = "txtFiltrar";
             this.txtFiltrar.Size = new System.Drawing.Size(208, 31);
             this.txtFiltrar.TabIndex = 6;
+            this.txtFiltrar.TextChanged += new System.EventHandler(this.txtFiltrar_TextChanged);
+            // 
+            // dgvConsultaEmpleado
+            // 
+            this.dgvConsultaEmpleado.AllowUserToAddRows = false;
+            this.dgvConsultaEmpleado.AllowUserToDeleteRows = false;
+            this.dgvConsultaEmpleado.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dgvConsultaEmpleado.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvConsultaEmpleado.Location = new System.Drawing.Point(12, 51);
+            this.dgvConsultaEmpleado.Name = "dgvConsultaEmpleado";
+            this.dgvConsultaEmpleado.ReadOnly = true;
+            this.dgvConsultaEmpleado.Size = new System.Drawing.Size(776, 313);
+            this.dgvConsultaEmpleado.TabIndex = 0;
+            this.dgvConsultaEmpleado.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvConsultaEmpleado_CellClick);
+            this.dgvConsultaEmpleado.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvConsultaEmpleado_CellDoubleClick);
             // 
             // ConsultaEmpleado
             // 
@@ -112,6 +118,8 @@
             this.Name = "ConsultaEmpleado";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "ConsultaEmpleado";
+            this.Load += new System.EventHandler(this.ConsultaEmpleado_Load);
+            this.Shown += new System.EventHandler(this.ConsultaEmpleado_Shown);
             ((System.ComponentModel.ISupportInitialize)(this.dgvConsultaEmpleado)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -119,12 +127,11 @@
         }
 
         #endregion
-
-        private System.Windows.Forms.DataGridView dgvConsultaEmpleado;
         private System.Windows.Forms.Button btnEliminar;
         private System.Windows.Forms.Button btnAgregar;
         private System.Windows.Forms.Label lblModificar;
         private System.Windows.Forms.Label lblFiltrar;
         private System.Windows.Forms.TextBox txtFiltrar;
+        private System.Windows.Forms.DataGridView dgvConsultaEmpleado;
     }
 }

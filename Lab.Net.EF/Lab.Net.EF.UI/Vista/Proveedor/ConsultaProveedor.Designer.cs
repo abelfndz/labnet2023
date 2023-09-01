@@ -44,6 +44,7 @@
             this.txtFiltrar.Name = "txtFiltrar";
             this.txtFiltrar.Size = new System.Drawing.Size(208, 31);
             this.txtFiltrar.TabIndex = 12;
+            this.txtFiltrar.TextChanged += new System.EventHandler(this.txtFiltrar_TextChanged);
             // 
             // lblFiltrar
             // 
@@ -74,6 +75,7 @@
             this.btnAgregar.TabIndex = 9;
             this.btnAgregar.Text = "Agregar";
             this.btnAgregar.UseVisualStyleBackColor = true;
+            this.btnAgregar.Click += new System.EventHandler(this.btnAgregar_Click);
             // 
             // btnEliminar
             // 
@@ -84,17 +86,21 @@
             this.btnEliminar.TabIndex = 8;
             this.btnEliminar.Text = "Eliminar";
             this.btnEliminar.UseVisualStyleBackColor = true;
+            this.btnEliminar.Click += new System.EventHandler(this.btnEliminar_Click);
             // 
             // dgvConsultaProveedor
             // 
             this.dgvConsultaProveedor.AllowUserToAddRows = false;
             this.dgvConsultaProveedor.AllowUserToDeleteRows = false;
+            this.dgvConsultaProveedor.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dgvConsultaProveedor.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvConsultaProveedor.Location = new System.Drawing.Point(12, 49);
             this.dgvConsultaProveedor.Name = "dgvConsultaProveedor";
             this.dgvConsultaProveedor.ReadOnly = true;
             this.dgvConsultaProveedor.Size = new System.Drawing.Size(776, 313);
             this.dgvConsultaProveedor.TabIndex = 7;
+            this.dgvConsultaProveedor.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvConsultaProveedor_CellClick);
+            this.dgvConsultaProveedor.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvConsultaProveedor_CellDoubleClick);
             // 
             // ConsultaProveedor
             // 
@@ -112,6 +118,8 @@
             this.Name = "ConsultaProveedor";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "ConsultaProveedor";
+            this.Load += new System.EventHandler(this.ConsultaProveedor_Load);
+            this.Shown += new System.EventHandler(this.ConsultaProveedor_Shown);
             ((System.ComponentModel.ISupportInitialize)(this.dgvConsultaProveedor)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();

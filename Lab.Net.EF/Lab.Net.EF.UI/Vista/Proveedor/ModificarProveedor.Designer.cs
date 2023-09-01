@@ -35,8 +35,8 @@
             this.lblId = new System.Windows.Forms.Label();
             this.lblCiudad = new System.Windows.Forms.Label();
             this.lblNombreCompania = new System.Windows.Forms.Label();
-            this.numericUpDown1 = new System.Windows.Forms.NumericUpDown();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).BeginInit();
+            this.nunId = new System.Windows.Forms.NumericUpDown();
+            ((System.ComponentModel.ISupportInitialize)(this.nunId)).BeginInit();
             this.SuspendLayout();
             // 
             // btnCancelar
@@ -48,6 +48,7 @@
             this.btnCancelar.TabIndex = 15;
             this.btnCancelar.Text = "Cancelar";
             this.btnCancelar.UseVisualStyleBackColor = true;
+            this.btnCancelar.Click += new System.EventHandler(this.btnCancelar_Click);
             // 
             // btnGuardar
             // 
@@ -58,6 +59,7 @@
             this.btnGuardar.TabIndex = 14;
             this.btnGuardar.Text = "Guardar";
             this.btnGuardar.UseVisualStyleBackColor = true;
+            this.btnGuardar.Click += new System.EventHandler(this.btnGuardar_Click);
             // 
             // txtCiudad
             // 
@@ -66,6 +68,7 @@
             this.txtCiudad.Name = "txtCiudad";
             this.txtCiudad.Size = new System.Drawing.Size(179, 32);
             this.txtCiudad.TabIndex = 13;
+            this.txtCiudad.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtCiudad_KeyPress);
             // 
             // txtNombreCompania
             // 
@@ -105,14 +108,14 @@
             this.lblNombreCompania.TabIndex = 9;
             this.lblNombreCompania.Text = "Nombre Compania";
             // 
-            // numericUpDown1
+            // nunId
             // 
-            this.numericUpDown1.Enabled = false;
-            this.numericUpDown1.Font = new System.Drawing.Font("Cascadia Code", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.numericUpDown1.Location = new System.Drawing.Point(223, 70);
-            this.numericUpDown1.Name = "numericUpDown1";
-            this.numericUpDown1.Size = new System.Drawing.Size(179, 26);
-            this.numericUpDown1.TabIndex = 8;
+            this.nunId.Enabled = false;
+            this.nunId.Font = new System.Drawing.Font("Cascadia Code", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.nunId.Location = new System.Drawing.Point(223, 70);
+            this.nunId.Name = "nunId";
+            this.nunId.Size = new System.Drawing.Size(179, 26);
+            this.nunId.TabIndex = 8;
             // 
             // ModificarProveedor
             // 
@@ -126,12 +129,12 @@
             this.Controls.Add(this.lblId);
             this.Controls.Add(this.lblCiudad);
             this.Controls.Add(this.lblNombreCompania);
-            this.Controls.Add(this.numericUpDown1);
+            this.Controls.Add(this.nunId);
             this.MaximumSize = new System.Drawing.Size(430, 430);
             this.MinimumSize = new System.Drawing.Size(430, 430);
             this.Name = "ModificarProveedor";
             this.Text = "Modificar Proveedor";
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.nunId)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -146,6 +149,6 @@
         private System.Windows.Forms.Label lblId;
         private System.Windows.Forms.Label lblCiudad;
         private System.Windows.Forms.Label lblNombreCompania;
-        private System.Windows.Forms.NumericUpDown numericUpDown1;
+        private System.Windows.Forms.NumericUpDown nunId;
     }
 }

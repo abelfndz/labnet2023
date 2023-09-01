@@ -8,7 +8,7 @@ namespace Lab.Net.EF.Logic.Proveedor
 {
     public class ProveedorDto
     {
-        public int Id { get; set; }
+        public long Id { get; set; }
         public string NombreCompania { get; set; }
         public string Ciudad { get; set;}
     }

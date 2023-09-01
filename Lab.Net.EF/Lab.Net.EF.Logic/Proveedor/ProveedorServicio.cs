@@ -1,5 +1,6 @@
 ﻿using Lab.Net.EF.Data;
 using Lab.Net.EF.Entities;
+using Lab.Net.EF.Logic.Empleado;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -15,7 +16,10 @@ namespace Lab.Net.EF.Logic.Proveedor
             {
                 return context.Suppliers
 
-                     .Where(x => x.CompanyName.Contains(cadenaBuscar))
+                     .AsNoTracking()
+                     .Where(x => x.CompanyName.Contains(cadenaBuscar) ||
+
+                                 x.City.Contains(cadenaBuscar))
 
                      .Select(x => new ProveedorDto
                      {
@@ -34,7 +38,6 @@ namespace Lab.Net.EF.Logic.Proveedor
                 {
                     CompanyName = dto.NombreCompania,
                     City = dto.Ciudad
-
 
                 };
 
