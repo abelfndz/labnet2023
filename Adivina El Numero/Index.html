@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Adivina el numero</title>
+    <link rel="stylesheet" type="text/css" href="assets/css/style.css" />
+  </head>
+  <body>
+    <h1>Juego de Adivinanza</h1>
+    <div id="instrucciones">
+        <h2>¿Cómo jugar?</h2>
+        <p>Bienvenido al Juego de Adivinanza. Tu objetivo es adivinar un número secreto entre 1 y 99. Tienes 10 intentos para hacerlo. Después de cada intento, recibirás una pista sobre si el número es más alto o más bajo. ¡Buena suerte!</p>
+    </div>
+    <p>Adivina el número:</p>
+    <input type="number" id="numero" min="1" max="99">
+    <button id="comprobar" class="boton">Comprobar</button>
+    <p id="mensaje"></p>
+    <p>Intentos restantes: <span id="intentosRestantes">5</span></p>
+    <p>Record de Intentos: <span id="record"></span></p>
+    <div id="intentosLista" class="intentosLista">
+        <h2>Registro de Intentos</h2>
+        <dl id="intentos" class="intentosLista"></dl>
+    </div>
+    <button id="reiniciar" class="boton">Reiniciar</button>
+
+    <script src="assets/js/main.js"></script>
+  </body>
+</html>
