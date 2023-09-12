@@ -78,6 +78,13 @@ namespace Lab.Net.EF.Logic.Proveedor
                 context.SaveChanges();
             }    
         }
-     
+        public Suppliers ObtenerId(int id)
+        {
+            using (var context = new NorthwindContext())
+            {
+                return context.Suppliers.FirstOrDefault(e => e.SupplierID == id);
+            }
+        }
+
     }
 }

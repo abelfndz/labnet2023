@@ -93,5 +93,13 @@ namespace Lab.Net.EF.Logic.Empleado
 
 
         }
+
+        public Employees ObtenerId(int id)
+        {
+            using (var context = new NorthwindContext())
+            {
+                return context.Employees.FirstOrDefault(e => e.EmployeeID == id);
+            }
+        }
     }
 }

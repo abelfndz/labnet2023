@@ -1,0 +1,21 @@
+﻿@model Lab.Net.EF.MVC.Models.EmpleadoView
+@{
+    ViewBag.Title = "Insertar Empleado";
+}
+
+@using (Html.BeginForm("InsertarModificar", "Empleados", FormMethod.Post))
+{
+    @Html.HiddenFor(e => e.Id);
+
+    <label>Nombre:</label>
+    @Html.TextBoxFor(e => e.Nombre)
+    @Html.ValidationMessageFor(e => e.Nombre, "", new { @class = "text-danger" })
+    <br />
+    <label>Apellido:</label>
+    @Html.TextBoxFor(e => e.Apellido)
+    @Html.ValidationMessageFor(e => e.Apellido, "", new { @class = "text-danger" })
+    <br />
+    <input type="submit" class="btn btn-success" value="Guardar" />
+
+
+}

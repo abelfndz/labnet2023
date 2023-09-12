@@ -1,0 +1,21 @@
+﻿@model Lab.Net.EF.MVC.Models.ProveedorView
+@{
+    ViewBag.Title = "Insertar Proveedores";
+}
+
+@using (Html.BeginForm("InsertarModificar", "Proveedores", FormMethod.Post))
+{
+    @Html.HiddenFor(e => e.Id);
+
+    <label>Nombre de la Compania:</label>
+    @Html.TextBoxFor(e => e.NombreCompania)
+    @Html.ValidationMessageFor(e => e.NombreCompania, "", new { @class = "text-danger" })
+    <br />
+    <label>Nombre de la Ciudad:</label>
+    @Html.TextBoxFor(e => e.Ciudad)
+    @Html.ValidationMessageFor(e => e.Ciudad, "", new { @class = "text-danger" })
+    <br />
+    <input type="submit" class="btn btn-success" value="Guardar" />
+
+
+}
