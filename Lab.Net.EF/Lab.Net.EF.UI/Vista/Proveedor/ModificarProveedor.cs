@@ -38,7 +38,7 @@ namespace Lab.Net.EF.UI.Vista.Proveedor
             {
                 var proveedorModificar = new ProveedorDto()
                 {
-                    Id = (long)nunId.Value,
+                    Id = (int)nunId.Value,
                     NombreCompania = txtNombreCompania.Text,
                     Ciudad = txtCiudad.Text
                 };

@@ -13,6 +13,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Lab.Net.EF.Entities", "Lab.
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Lab.Net.EF.MVC", "Lab.Net.EF.MVC\Lab.Net.EF.MVC.csproj", "{CCDAA437-F077-42FA-BD58-EF1262DF5923}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Lab.Net.EF.WebApi", "Lab.Net.EF.WebApi\Lab.Net.EF.WebApi.csproj", "{D7EFF494-8F4C-40C8-9102-4B404CB0EEF5}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -39,6 +41,10 @@ Global
 		{CCDAA437-F077-42FA-BD58-EF1262DF5923}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{CCDAA437-F077-42FA-BD58-EF1262DF5923}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{CCDAA437-F077-42FA-BD58-EF1262DF5923}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D7EFF494-8F4C-40C8-9102-4B404CB0EEF5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D7EFF494-8F4C-40C8-9102-4B404CB0EEF5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D7EFF494-8F4C-40C8-9102-4B404CB0EEF5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D7EFF494-8F4C-40C8-9102-4B404CB0EEF5}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

@@ -25,7 +25,12 @@ namespace Lab.Net.EF.Logic.Proveedor
                      {
                          Id = x.SupplierID,
                          NombreCompania = x.CompanyName,
-                         Ciudad = x.City
+                         NombreContrato = x.ContactName,
+                         TituloContrato = x.ContactTitle,
+                         Direccion = x.Address,
+                         Pais = x.Country,
+                         Ciudad = x.City,
+                         Telefono = x.Phone
 
                      }).ToList();
             }

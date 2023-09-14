@@ -15,6 +15,12 @@ namespace Lab.Net.EF.MVC.Models
         [Required]
         [StringLength(20)]
         [RegularExpression("^[a-zA-Z\\s]+$", ErrorMessage = "Este campo no acepta valores numericos ni simbolos")]
+        public string NombreContrato { get; set; }
+        public string TituloContrato { get; set; }
+        public string Direccion { get; set; }
+        public string Pais { get; set; }
         public string Ciudad { get; set; }
+        public string Telefono { get; set; }
+
     }
 }

@@ -1,0 +1,64 @@
+﻿*{
+    margin: 0;
+    padding: 0;
+    box-sizing:border-box;
+}
+body {
+    background-color: black;
+}
+main{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 18px
+}
+h2 {
+    color: #E58400;
+}
+label {
+    font-size: 20px;
+    color: white;
+}
+
+.card-content span {
+    font-size: 20px;
+    color: #999;
+}
+.image-container{
+    display: flex;
+}
+.image-container img{
+    width: 100%;
+}
+
+article{
+    padding:10px;
+    box-shadow: 0px 0px 1px #000;
+}
+
+.card-content span.status-alive {
+    color: #BDEC0D;
+}
+
+.card-content span.status-dead {
+    color: #DE2C1E;
+}
+
+.card-content span.status-desconocido {
+    color: #94999F;
+}
+
+.card-content span.species-human {
+    color: #F1BD72;
+}
+.card-content span.species-alien {
+    color: #41EE0E;
+}
+
+.card-content span.gender-female {
+    color: #EE04CE;
+}
+
+.card-content span.gender-male {
+    color: #042BEE;
+}
+

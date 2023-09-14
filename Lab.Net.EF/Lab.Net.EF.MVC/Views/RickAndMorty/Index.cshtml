@@ -1,0 +1,43 @@
+﻿@model  List<Lab.Net.EF.MVC.Models.RickAndMortyView>
+@{
+    ViewBag.Title = "Rick And Morty Page";
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    @Styles.Render("~/Content/css")
+    <link href="~/Content/Custom.css" rel="stylesheet" />
+    <title>API Rick And Morty </title>
+</head>
+<body>
+    <main>
+        
+            @foreach (var personaje in Model)
+            {
+                <article>
+                    <div class="image-container">
+                        <img src="@personaje.image" />
+                    </div>
+                    <div class="card-content">
+                        <h2>@personaje.name</h2>
+                        <label>Ubicacion: </label><span> @personaje.location.name</span>
+                        <br>
+                        <label>Estado: </label><span class="@(personaje.status == "Alive" ? "status-alive" : personaje.status == "Dead" ?
+                    "status-dead" : "status-desconocido")"> @personaje.status</span>
+                    <br>
+                    <label>Especie: </label><span class="@(personaje.species == "Human" ? "species-human" :  "species-alien")"> @personaje.species</span>
+                    <br>
+                    <label>Genero: </label><span class="@(personaje.gender == "Female" ? "gender-female" :  "gender-male")" > @personaje.gender</span>
+
+                    </div>
+                </article>
+             }
+        
+    </main>
+
+
+</body>
+</html>

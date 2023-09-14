@@ -31,7 +31,11 @@ namespace Lab.Net.EF.Logic.Empleado
                      {
                          Id = x.EmployeeID,
                          Nombre = x.FirstName,
-                         Apellido = x.LastName
+                         Apellido = x.LastName,
+                         Direccion = x.Address,
+                         Ciudad = x.City,
+                         FechaContratacion = (DateTime)x.HireDate,
+                         Pais = x.Country
 
                      }).ToList();
             }
