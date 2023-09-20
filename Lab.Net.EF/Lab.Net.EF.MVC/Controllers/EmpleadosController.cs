@@ -83,7 +83,7 @@ namespace Lab.Net.EF.MVC.Controllers
             return View("InsertarModificar");
         }
 
-        public ActionResult Eliminar(decimal id)
+        public ActionResult Eliminar(int id)
         {
             try
             {

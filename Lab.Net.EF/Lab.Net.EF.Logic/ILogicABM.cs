@@ -11,6 +11,6 @@ namespace Lab.Net.EF.Logic
         IEnumerable<T> GetAll(string cadenaBuscar);
         long Insertar(T dto);
         void Modificar(T dto);
-        void Eliminar(decimal Id);
+        void Eliminar(int Id);
     }
 }

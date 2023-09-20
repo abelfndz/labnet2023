@@ -12,7 +12,7 @@ using System.Web.UI;
 
 namespace Lab.Net.EF.WebApi.Controllers
 {
-    
+    [System.Web.Http.Cors.EnableCors("*", "*", "*")]
     public class ProveedorController : ApiController
     {
         private ProveedorServicio _proveedorServicio = new ProveedorServicio();
@@ -164,7 +164,7 @@ namespace Lab.Net.EF.WebApi.Controllers
 
         }
 
-        public IHttpActionResult Delete(decimal Id)
+        public IHttpActionResult Delete(int Id)
         {
             try
             {

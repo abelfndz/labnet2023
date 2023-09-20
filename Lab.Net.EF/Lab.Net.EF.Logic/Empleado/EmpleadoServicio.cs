@@ -34,7 +34,7 @@ namespace Lab.Net.EF.Logic.Empleado
                          Apellido = x.LastName,
                          Direccion = x.Address,
                          Ciudad = x.City,
-                         FechaContratacion = (DateTime)x.HireDate ?? DateTime.MinValue,
+                         FechaContratacion = (DateTime?)x.HireDate ?? DateTime.MinValue,
                          Pais = x.Country
 
                      }).ToList();
@@ -50,9 +50,10 @@ namespace Lab.Net.EF.Logic.Empleado
                 var nuevoEmpleado = new Employees()
                 {
                     FirstName = dto.Nombre,
-                    LastName = dto.Apellido
-
-
+                    LastName = dto.Apellido,
+                    Country = dto.Pais,
+                    City = dto.Ciudad,
+                    Address = dto.Direccion,
                 };
 
                 context.Employees.Add(nuevoEmpleado);
@@ -74,28 +75,12 @@ namespace Lab.Net.EF.Logic.Empleado
 
                 empleadoModificar.FirstName = dto.Nombre;
                 empleadoModificar.LastName = dto.Apellido;
+                empleadoModificar.Country = dto.Pais;
+                empleadoModificar.City = dto.Ciudad;
+                empleadoModificar.Address = dto.Direccion;
 
                 context.SaveChanges();
             }
-        }
-
-
-        public void Eliminar(decimal Id)
-        {
-            using (var context = new NorthwindContext())
-            {
-                var empleadoEliminar = context.Employees
-                    .FirstOrDefault(x => x.EmployeeID == Id);
-
-                context.Employees.Remove(empleadoEliminar);
-
-
-
-                context.SaveChanges();
-
-            }
-
-
         }
 
         public Employees ObtenerId(int id)
@@ -103,6 +88,22 @@ namespace Lab.Net.EF.Logic.Empleado
             using (var context = new NorthwindContext())
             {
                 return context.Employees.FirstOrDefault(e => e.EmployeeID == id);
+            }
+        }
+
+        public void Eliminar(int Id)
+        {
+            using (var context = new NorthwindContext())
+            {
+                var empleadoEliminar = context.Employees
+                    .FirstOrDefault(x => x.EmployeeID == Id);
+
+                if (empleadoEliminar == null)
+                    throw new Exception("El Empleado no existe");
+                context.Employees.Remove(empleadoEliminar);
+
+                context.SaveChanges();
+
             }
         }
     }

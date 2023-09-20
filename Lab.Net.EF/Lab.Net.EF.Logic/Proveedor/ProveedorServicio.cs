@@ -72,7 +72,7 @@ namespace Lab.Net.EF.Logic.Proveedor
 
         }
 
-        public void Eliminar(decimal Id)
+        public void Eliminar(int Id)
         {
             using (var context = new NorthwindContext())
             {

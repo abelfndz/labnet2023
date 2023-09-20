@@ -23,7 +23,7 @@ namespace Lab.Net.EF.MVC.Models
 
         public string Direccion { get; set; }
         public string Ciudad { get; set; }
-        public DateTime FechaContratacion { get; set; }
+        public DateTime? FechaContratacion { get; set; }
         public string Pais { get; set; }
     }
 }

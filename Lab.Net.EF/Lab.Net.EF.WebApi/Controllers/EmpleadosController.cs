@@ -96,6 +96,10 @@ namespace Lab.Net.EF.WebApi.Controllers
                 {
                     _empleadoDto.Nombre = _empleadoView.Nombre;
                     _empleadoDto.Apellido = _empleadoView.Apellido;
+                    _empleadoDto.Pais = _empleadoView.Pais;
+                    _empleadoDto.Ciudad = _empleadoView.Ciudad;
+                    _empleadoDto.Direccion = _empleadoView.Direccion;
+
                     _empleadoServicio.Insertar(_empleadoDto);
 
                     return Ok("El empleado se inserto correctamente");
@@ -145,7 +149,7 @@ namespace Lab.Net.EF.WebApi.Controllers
 
         }
 
-        public IHttpActionResult Delete(decimal Id)
+        public IHttpActionResult Delete(int Id)
         {
             try
             {
