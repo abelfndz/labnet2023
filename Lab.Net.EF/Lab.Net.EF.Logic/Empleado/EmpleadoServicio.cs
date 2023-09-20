@@ -34,7 +34,7 @@ namespace Lab.Net.EF.Logic.Empleado
                          Apellido = x.LastName,
                          Direccion = x.Address,
                          Ciudad = x.City,
-                         FechaContratacion = (DateTime)x.HireDate,
+                         FechaContratacion = (DateTime)x.HireDate ?? DateTime.MinValue,
                          Pais = x.Country
 
                      }).ToList();
