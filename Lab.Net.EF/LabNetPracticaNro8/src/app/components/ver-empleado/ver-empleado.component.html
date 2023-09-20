@@ -1,0 +1,23 @@
+<div class="titulo">
+    <h1>Ver Empleado</h1>
+        
+</div>
+
+<div *ngIf="empleado != null " class="container">
+    <mat-card class="card">
+        <mat-card-title>{{empleado.Nombre}} {{empleado.Apellido}}</mat-card-title>
+        <mat-card-content>
+            <p><strong>Pais: {{empleado.Pais}}</strong></p>
+            <p><strong>Ciudad: {{empleado.Ciudad}}</strong></p>
+            <p><strong>Direccion: {{empleado.Direccion}}</strong></p>
+            <p><strong>Fecha Contratacion: {{empleado.FechaContratacion}}</strong></p>
+
+         
+        </mat-card-content>
+
+        <mat-card-actions> 
+            <Button routerLink="listEmpleados" mat-button>Volver</Button>
+        </mat-card-actions>
+    </mat-card>
+    
+</div>

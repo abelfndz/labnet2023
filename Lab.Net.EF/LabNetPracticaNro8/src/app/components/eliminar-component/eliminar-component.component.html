@@ -1,0 +1,7 @@
+
+<h3>Esta seguro que desea eliminar el Empleado: <strong>{{empleado.Nombre}} {{empleado.Apellido}}</strong> ?</h3>
+<div class="button-container">
+    <button (click)="confirm()" routerLink="listEmpleados" type="submit" class="Guardar" mat-button color="primary">Confimar</button>
+    <span class="button-space"></span>
+    <button (click)="cancel()" class="Volver" routerLink="listEmpleados" mat-button color="accent">Volver</button>
+</div>
